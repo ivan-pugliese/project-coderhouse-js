@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!--Global Meta-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://ivan-pugliese.github.io/proyecto-coder-js/coffee-shop/index.html">
+  <link rel="icon" href="images/coffee-favicon.ico">
+  <title>IPCoffees</title>
+  <meta name="description"
+    content="Somos un Negocio familiar, nuestro emprendimiento lleva más de 10 años y tenemos como objetivo que las personas disfruten de nuestras deliciosas tortas hechas con el mejor de los cariños, y porque no, acompañarlas con un buen café de calidad. Armá tu pedido y disfrutá del buen sabor. Retirá en nuestras sucursales de 8 a 19HS.">
+  <!--Open Graph-->
+  <meta name="twitter:card" content="summary">
+  <meta property="og:type" content="website">
+  <meta property="og:title" name="twitter:title" content="IPCoffes">
+  <meta property="og:image" name="twitter:image"
+    content="https://ivan-pugliese.github.io/proyecto-coder-js/coffee-shop/assets/hero-image.jpg">
+  <meta property="og:url" name="twitter:url"
+    content="https://ivan-pugliese.github.io/proyecto-coder-js/coffee-shop/proyecto-js-coderhouse">
+  <meta property="og:description" name="twitter:description"
+    content="Somos un Negocio familiar, nuestro emprendimiento lleva más de 10 años y tenemos como objetivo que las personas disfruten de nuestras deliciosas tortas hechas con el mejor de los cariños, y porque no, acompañarlas con un buen café de calidad. Armá tu pedido y disfrutá del buen sabor. Retirá en nuestras sucursales de 8 a 19HS.">
+  <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <section class="container">
+      <button class="menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
+        </svg>
+        <svg class="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z" />
+        </svg>
+      </button>
+      <nav class="menu">
+        <ul class="menu-ul">
+          <li><a href="#inicio"><span class="jam jam-home"></span>Inicio</a></li>
+          <li><a href="#nosotros"><span class="jam jam-smiley"></span>Nosotros</a></li>
+          <li><a href="#cafes"><span class="jam jam-coffee"></span>Cafés</a></li>
+          <li><a href="#tortas"><span class="jam jam-birthday-cake"></span>Tortas</a></li>
+          <li><a href="#contacto"><span class="jam jam-message"></span>Contacto</a></li>
+          <li id="btnSesion"><span class="jam jam-user"></span>Iniciar Sesión</li>
+
+        </ul>
+      </nav>
+      <div id="sesion-shop" class="sesion-shop">
+        <span class="jam jam-shopping-cart bg-color-sc border-radius" style="color:var(--white-color)"></span>
+      </div>
+    </section>
+  </header>
+
+  <section class="home" id="inicio">
+    <article class="hero-image" style="--hero-image: url('../images/hero-image.jpg'); --hero-attachment: fixed;">
+      <aside class="hero-image-opacity">
+        <div class="hero-image-content">
+          <h1>Bienvenidos/as a <span class="jam jam-coffee"></span>IPCoffees</h1>
+          <h3>Realizá tu pedido online en simples pasos!</h3>
+          <a href="#cafes">Arma tu pedido!</a>
+        </div>
+      </aside>
+    </article>
+  </section>
+
+  <section class="about margins" id="nosotros">
+    <article class="about-title text-center">
+      <h2>Somos <span class="jam jam-coffee"></span>IPCoffees</h2>
+      <h3>Te contamos un poco sobre nosotros!</h3>
+      <p class="text-center text-black container-width">Somos un <i>Negocio</i> familiar, nuestro emprendimiento lleva
+        más de 10 años y tenemos como objetivo que las personas disfruten de nuestras deliciosas <i>tortas</i> hechas
+        con el mejor de los cariños, y porque no, acompañarlas con un buen <i>café</i> de calidad. Armá tu pedido y
+        disfrutá del buen sabor. Retirá en nuestras sucursales de 8 a 19HS.</p>
+    </article>
+    <article class="about-stores flex-row-lg">
+      <div class="cards-2 box-shadow-1 bg-color-white">
+        <img src="images/tienda-cafe1.jpg" alt="Sucursal 1">
+        <h3><span class="jam jam-pin-alt"></span> Av. 9 de Julio</h3>
+      </div>
+      <div class="cards-2 box-shadow-1 bg-color-white">
+        <img src="images/tienda-cafe2.jpg" alt="Sucursal 2">
+        <h3><span class="jam jam-pin-alt"></span> Av. Corrientes</h3>
+      </div>
+      <div class="cards-2 box-shadow-1 bg-color-white">
+        <img src="images/tienda-cafe3.jpg" alt="Sucursal 3">
+        <h3><span class="jam jam-pin-alt"></span> Av. Belgrano</h3>
+      </div>
+    </article>
+  </section>
+
+  <section class="coffes bg-color-tr" id="cafes">
+    <article class="coffes-title">
+      <h2 class="text-center">Nuestros Cafés <span class="jam jam-coffee"></span></h2>
+      <p class="text-center">Todos nuestros tamaños de café son medianos.</p>
+    </article>
+    <article id="cards-cafes" class="cards-container"></article>
+  </section>
+
+  <section class="cakes bg-color-tr" id="tortas">
+    <article class="cakes-title">
+      <h2 class="text-center">Tortas y Postres <span class="jam jam-birthday-cake"></span></h2>
+    </article>
+    <article id="cards-tortas" class="cards-container"></article>
+  </section>
+
+  <section class="contact margins" id="contacto">
+    <article class="contact-title">
+      <h2 class="text-center">¿Deseas contactarnos o dejarnos algún comentario?</h2>
+    </article>
+    <article class="small-cards-container">
+      <div class="small-card box-shadow-1">
+        <span class="jam jam-home"></span>
+        <h4>Ubicación</h4>
+        <i>Buenos Aires, Argentina.</i>
+      </div>
+      <div class="small-card box-shadow-1">
+        <span class="jam jam-grid-f"></span>
+        <h4>Redes Sociales</h4>
+        <div class="small-card-media">
+          <span class="jam jam-facebook"></span>
+          <span class="jam jam-instagram"></span>
+          <span class="jam jam-linkedin"></span>
+        </div>
+      </div>
+      <div class="small-card box-shadow-1">
+        <span class="jam jam-message-alt-writing"></span>
+        <h4>Correo Electrónico</h4>
+        <i>ivanpugliese01@gmail.com</i>
+      </div>
+    </article>
+    <form id="form" class="contact-form box-shadow-1">
+      <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre :" required>
+      <input type="email" id="email" name="email" placeholder="Ingresa tu email :" required>
+      <textarea id="comentarios" name="coments" cols="50" rows="10" placeholder="Deja tus comentarios!"></textarea>
+      <button class="text-left" type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <section id="modal-sesion" class="modal-general none">
+    <article class="modal-general-content margins">
+      <form id="formSesion" class="contact-form box-shadow-1">
+        <input type="text" id="nameSesion" name="nameSesion" placeholder="Ingresa tu nombre de usuario" required>
+        <input type="password" id="passwordSesion" name="passwordSesion" placeholder="Ingresa tu contraseña" required>
+        <button id="btnSesion" type="submit">Iniciar Sesión</button>
+      </form>
+      <div class="text-center paddings sesion-question">
+        <p><b class="text-principal">¿Aun no tienes una cuenta?</b><button id="btn2" class="button2">Registrate</button>
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <section id="modal-register" class="modal-general none">
+    <article class="modal-general-content margins">
+      <form id="formRegister" class="contact-form box-shadow-1">
+        <input type="text" id="nameRegister" name="nameRegister" placeholder="Crea tu nombre de usuario" required>
+        <input type="password" id="passwordRegister" name="passwordRegister" placeholder="Crea tu contraseña" required>
+        <button id="btnRegister" type="submit">Registrarse</button>
+      </form>
+    </article>
+  </section>
+
+  <section id="shop-container" class="modal-general none">
+    <article class="modal-general-content margins shop-product-modal">
+      <span id="shop-close" class="jam jam-close"></span>
+      <div id="products-container" class="products-container"></div>
+      <div class="container-buttons-shop">
+        <h4 class="text-principal">Total: $<i id="total">0</i></h4>
+        <button id="delete-shop">Vaciar Carrito</button>
+        <button id="build">Finalizar Compra</button>
+      </div>
+    </article>
+  </section>
+
+  <section id="send-coment" class="modal-general none">
+    <article class="modal-general-content margins send-coment-modal">
+      <h3>Mensaje enviado, muchas gracias! <span class="jam jam-smiley"></span></h3>
+      <button id="return">Volver</button>
+    </article>
+  </section>
+
+  <footer class="footer text-center">
+    <small>Sitio desarrollado por Ivan Pugliese</small>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
