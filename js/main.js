@@ -87,108 +87,50 @@ formSesion.addEventListener("submit", (e) => {
   }
 })
 
-// Molde para mis productos
-class Producto {
-  constructor(id, imagen, nombre, precio, cantidad) {
-    this.id = id;
-    this.imagen = imagen;
-    this.nombre = nombre;
-    this.precio = precio;
-    this.cantidad = cantidad;
-  }
-}
 
-// Cafés
-const cafeLeche = new Producto(1, "images/cafe-con-leche.jpg", "Café con leche", 250, 1);
-const cafeCrema = new Producto(2, "images/cafe-con-crema.jpg", "Café con crema", 280, 1);
-const cafeSolo = new Producto(3, "images/cafe-solo.jpg", "Café solo", 220, 1);
-const latte = new Producto(4, "images/latte.jpg", "Latte", 300, 1);
-const cafeConTorta = new Producto(5, "images/combo-cake.jpg", "Café con porción de torta", 700, 1);
-const cafeConMedialunas = new Producto(6, "images/combo-medialunas.jpg", "Café con 4 Medialunas", 500, 1);
+//Me genero mis cards de Productos con JS
+const productos = "json/productos.json";
 
-//Tortas y postres
-const blueberryCake = new Producto(7, "images/blueberry-cake.jpg", "Blueberry-Cake", 1200, 1);
-const bombCake = new Producto(8, "images/bomb-cake.jpg", "Bomb-Cake", 1500, 1);
-const frutiCake = new Producto(9, "images/fruti-cake.jpg", "Fruti-Cake", 1250, 1);
-const lemonPie = new Producto(10, "images/lemon-pie.jpg", "Lemon Pie", 900, 1);
-const paradiseCake = new Producto(11, "images/paradise-cake.jpg", "Paradise-Cake", 1300, 1);
-const dona = new Producto(12, "images/donas.jpg", "Dona", 300, 1);
+const cardsProductos = document.getElementById("cards-products");
 
 const carrito = [];
 
-//cards de cafes con JS - DOM
-const arrayCafes = [cafeLeche, cafeCrema, cafeSolo, latte, cafeConTorta, cafeConMedialunas];
-const cardsCafes = document.getElementById("cards-cafes");
-arrayCafes.forEach(producto => {
-  let div = document.createElement("div");
-  div.className = "cards box-shadow-1 bg-color-white";
-  div.innerHTML = `<img src="${producto.imagen}" alt="">
-                   <h4 class="text-center">${producto.nombre}</h4>
-                   <i class="text-center">Precio: $${producto.precio}</i>
-                   <button id="agregar${producto.id}">Agregar al carrito</button>`;
-  cardsCafes.appendChild(div);
+fetch(productos)
+  .then(response => response.json())
+  .then(datos => {
+    datos.forEach(producto => {
+      let div = document.createElement("div");
+      div.className = "cards box-shadow-1 bg-color-white";
+      div.innerHTML = `<img src="${producto.imagen}" alt="">
+                      <h4 class="text-center">${producto.nombre}</h4>
+                      <i class="text-center">Precio: $${producto.precio}</i>
+                      <button id="agregar${producto.id}">Agregar al carrito</button>`;
+      cardsProductos.appendChild(div);
 
-  const btnAgregar = document.getElementById(`agregar${producto.id}`);
-  btnAgregar.addEventListener("click", () => {
-    agregarCafes(producto.id);
-    Toastify({
-      text: "Producto añadido al carrito",
-      duration: 1500,
-      position: "right",
-      style: {
-        background: "linear-gradient(to right, #ff4e50, #FD7C60)"
+      const btnAgregar = document.getElementById(`agregar${producto.id}`);
+      btnAgregar.addEventListener("click", () => {
+        agregarProducto(producto.id);
+        Toastify({
+          text: "Producto añadido al carrito",
+          duration: 1500,
+          position: "right",
+          style: {
+            background: "linear-gradient(to right, #ff4e50, #FD7C60)"
+          }
+        }).showToast();
+      });
+      function agregarProducto(id) {
+        const producto = datos.find(producto => producto.id === id);
+        const productoCantidad = carrito.find(producto => producto.id === id);
+
+        productoCantidad ? productoCantidad.cantidad++ : carrito.push(producto);
+
+        localStorage.setItem("Productos", JSON.stringify(carrito));
+
+        carritoActualizado();
       }
-    }).showToast();
+    });
   });
-});
-
-function agregarCafes(id) {
-  const producto = arrayCafes.find(producto => producto.id === id);
-  const productoCantidad = carrito.find(producto => producto.id === id);
-
-  productoCantidad ? productoCantidad.cantidad++ : carrito.push(producto);
-
-  localStorage.setItem("Productos", JSON.stringify(carrito));
-
-  carritoActualizado();
-}
-
-//cards de tortas con JS - DOM
-const arrayTortas = [blueberryCake, bombCake, frutiCake, lemonPie, paradiseCake, dona];
-const cardsTortas = document.getElementById("cards-tortas");
-arrayTortas.forEach(producto => {
-  let div = document.createElement("div");
-  div.className = "cards box-shadow-1 bg-color-white";
-  div.innerHTML = `<img src="${producto.imagen}" alt="">
-                   <h4 class="text-center">${producto.nombre}</h4>
-                   <i class="text-center">Precio: $${producto.precio}</i>
-                   <button id="agregar${producto.id}">Agregar al carrito</button>`;
-  cardsTortas.appendChild(div);
-
-  const btnAgregar = document.getElementById(`agregar${producto.id}`);
-  btnAgregar.addEventListener("click", () => {
-    agregarTortas(producto.id);
-    Toastify({
-      text: "Producto añadido al carrito",
-      duration: 1500,
-      position: "right",
-      style: {
-        background: "linear-gradient(to right, #ff4e50, #FD7C60)"
-      }
-    }).showToast();
-  });
-});
-
-function agregarTortas(id) {
-  const producto = arrayTortas.find(producto => producto.id === id);
-  const productoCantidad = carrito.find(producto => producto.id === id);
-
-  productoCantidad ? productoCantidad.cantidad++ : carrito.push(producto);
-
-  localStorage.setItem("Productos", JSON.stringify(carrito));
-
-  carritoActualizado();
-}
 
 if (localStorage.getItem("Productos")) {
   let productoNuevo = JSON.parse(localStorage.getItem("Productos"));
@@ -305,4 +247,4 @@ if (localStorage.getItem("Mensajes")) {
   for (let i = 0; i < mensajeNuevo.length; i++) {
     mensajes.push(mensajeNuevo[i]);
   };
-};
+};  

@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "imagen": "images/cafe-con-leche.jpg",
+    "nombre": "Café con leche",
+    "precio": 250,
+    "cantidad": 1
+  },
+  {
+    "id": 2,
+    "imagen": "images/cafe-con-crema.jpg",
+    "nombre": "Café con crema",
+    "precio": 280,
+    "cantidad": 1
+  },
+  {
+    "id": 3,
+    "imagen": "images/cafe-solo.jpg",
+    "nombre": "Café solo",
+    "precio": 220,
+    "cantidad": 1
+  },
+  {
+    "id": 4,
+    "imagen": "images/latte.jpg",
+    "nombre": "Latte",
+    "precio": 300,
+    "cantidad": 1
+  },
+  {
+    "id": 5,
+    "imagen": "images/combo-cake.jpg",
+    "nombre": "Café con porción de torta",
+    "precio": 700,
+    "cantidad": 1
+  },
+  {
+    "id": 6,
+    "imagen": "images/combo-medialunas.jpg",
+    "nombre": "Café con 4 Medialunas",
+    "precio": 500,
+    "cantidad": 1
+  },
+  {
+    "id": 7,
+    "imagen": "images/blueberry-cake.jpg",
+    "nombre": "Blueberry-Cake",
+    "precio": 1200,
+    "cantidad": 1
+  },
+  {
+    "id": 8,
+    "imagen": "images/bomb-cake.jpg",
+    "nombre": "Bomb-Cake",
+    "precio": 1500,
+    "cantidad": 1
+  },
+  {
+    "id": 9,
+    "imagen": "images/fruti-cake.jpg",
+    "nombre": "Fruti-Cake",
+    "precio": 220,
+    "cantidad": 1
+  },
+  {
+    "id": 10,
+    "imagen": "images/lemon-pie.jpg",
+    "nombre": "Lemon Pie",
+    "precio": 900,
+    "cantidad": 1
+  },
+  {
+    "id": 11,
+    "imagen": "images/paradise-cake.jpg",
+    "nombre": "Paradise-Cake",
+    "precio": 1300,
+    "cantidad": 1
+  },
+  {
+    "id": 12,
+    "imagen": "images/donas.jpg",
+    "nombre": "Dona",
+    "precio": 300,
+    "cantidad": 1
+  }
+]
