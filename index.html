@@ -21,6 +21,7 @@
     content="https://ivan-pugliese.github.io/proyecto-coder-js/coffee-shop/proyecto-js-coderhouse">
   <meta property="og:description" name="twitter:description"
     content="Somos un Negocio familiar, nuestro emprendimiento lleva más de 10 años y tenemos como objetivo que las personas disfruten de nuestras deliciosas tortas hechas con el mejor de los cariños, y porque no, acompañarlas con un buen café de calidad. Armá tu pedido y disfrutá del buen sabor. Retirá en nuestras sucursales de 8 a 19HS.">
+  <!--Styles-->
   <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,7 +95,7 @@
     </article>
   </section>
 
-  <section class="products bg-color-tr" id="cafes">
+  <section class="products bg-color-tr">
     <article class="products-title">
       <h2 class="text-center">Nuestros Cafés y Tortas <span class="jam jam-coffee"></span></h2>
       <p class="text-center">Todos nuestros tamaños de café son medianos.</p>
@@ -102,7 +103,7 @@
     <article id="cards-products" class="cards-container"></article>
   </section>
 
-  <section class="contact margins" id="contacto">
+  <section class="contact margins">
     <article class="contact-title">
       <h2 class="text-center">¿Deseas contactarnos o dejarnos algún comentario?</h2>
     </article>
@@ -137,6 +138,7 @@
 
   <section id="modal-sesion" class="modal-general none">
     <article class="modal-general-content margins">
+      <span id="sesion-close" class="jam jam-close"></span>
       <form id="formSesion" class="contact-form box-shadow-1">
         <input type="text" id="nameSesion" name="nameSesion" placeholder="Ingresa tu nombre de usuario" required>
         <input type="password" id="passwordSesion" name="passwordSesion" placeholder="Ingresa tu contraseña" required>
@@ -151,6 +153,7 @@
 
   <section id="modal-register" class="modal-general none">
     <article class="modal-general-content margins">
+      <span id="register-close" class="jam jam-close"></span>
       <form id="formRegister" class="contact-form box-shadow-1">
         <input type="text" id="nameRegister" name="nameRegister" placeholder="Crea tu nombre de usuario" required>
         <input type="password" id="passwordRegister" name="passwordRegister" placeholder="Crea tu contraseña" required>
@@ -166,8 +169,31 @@
       <div class="container-buttons-shop">
         <h4 class="text-principal">Total: $<i id="total">0</i></h4>
         <button id="delete-shop">Vaciar Carrito</button>
-        <button id="build">Finalizar Compra</button>
+        <button id="pay">Abonar</button>
       </div>
+    </article>
+  </section>
+
+  <section id="build-process" class="modal-general none">
+    <article class="modal-general-content">
+      <span id="back" class="jam jam-arrow-right"></span>
+      <form id="build-form" class="contact-form">
+        <div>
+          <p>¿Cómo desea abonar?</p>
+          <label for="transfer">Transferencia</label>
+          <input type="radio" name="type-pay" id="transfer">
+          <label for="cash">Efectivo</label>
+          <input type="radio" name="type-pay" id="cash">
+        </div>
+        <div>
+          <p>Si desea abonar con Tarjeta de Crédito: </p>
+          <input type="text" placeholder="Ingrese numero de tarjeta">
+          <p>Fecha de vencimiento y Código de seguridad:</p>
+          <input type="date">
+          <input type="text" placeholder="Código de seguridad">
+        </div>
+        <button type="submit">Finalizar Compra</button>
+      </form>
     </article>
   </section>
 
@@ -184,7 +210,10 @@
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="js/main.js"></script>
+  <script src="js/menu-btn.js"></script>
+  <script src="js/registro-sesion.js"></script>
+  <script src="js/productos-carrito.js"></script>
+  <script src="js/mensajes.js"></script>
 </body>
 
 </html>

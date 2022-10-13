@@ -432,6 +432,7 @@ button:hover {
 }
 
 .contact-form input {
+  font-size: var(--font);
   border: none;
   border-bottom: 1px solid var(--color-principal);
 }
@@ -634,6 +635,11 @@ hr {
   color: var(--white-color);
   font-weight: bold;
   background-color: var(--color-secundario);
+}
+
+.jam-close,
+.jam-arrow-right {
+  margin: 1rem;
 }
 
 
