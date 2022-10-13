@@ -138,3 +138,4 @@ btnBack.addEventListener("click", () => {
   modalShopContenedor.className = "modal-general";
   abonarContenedor.className = "none"
 });
+

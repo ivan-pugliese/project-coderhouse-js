@@ -46,8 +46,7 @@
         <ul class="menu-ul">
           <li><a href="#inicio"><span class="jam jam-home"></span>Inicio</a></li>
           <li><a href="#nosotros"><span class="jam jam-smiley"></span>Nosotros</a></li>
-          <li><a href="#cafes"><span class="jam jam-coffee"></span>Cafés</a></li>
-          <li><a href="#tortas"><span class="jam jam-birthday-cake"></span>Tortas</a></li>
+          <li><a href="#products"><span class="jam jam-coffee"></span>Productos</a></li>
           <li><a href="#contacto"><span class="jam jam-message"></span>Contacto</a></li>
           <li id="btnSesion"><span class="jam jam-user"></span>Iniciar Sesión</li>
         </ul>
@@ -95,15 +94,19 @@
     </article>
   </section>
 
-  <section class="products bg-color-tr">
-    <article class="products-title">
+  <section id="products" class="products bg-color-tr">
+    <article id="welcome-sesion" class="welcome-sesion">
+      <h2>Inicia Sesión para ver nuestros productos y realizá tu compra!</h2>
+      <img src="images/welcome-products.svg" alt="Illustración">
+    </article>
+    <article id="product-title" class="products-title none">
       <h2 class="text-center">Nuestros Cafés y Tortas <span class="jam jam-coffee"></span></h2>
       <p class="text-center">Todos nuestros tamaños de café son medianos.</p>
     </article>
-    <article id="cards-products" class="cards-container"></article>
+    <article id="cards-products" class="cards-container none"></article>
   </section>
 
-  <section class="contact margins">
+  <section id="contacto" class="contact margins">
     <article class="contact-title">
       <h2 class="text-center">¿Deseas contactarnos o dejarnos algún comentario?</h2>
     </article>
@@ -136,6 +139,7 @@
     </form>
   </section>
 
+  <!--Modales-->
   <section id="modal-sesion" class="modal-general none">
     <article class="modal-general-content margins">
       <span id="sesion-close" class="jam jam-close"></span>
@@ -181,13 +185,15 @@
         <div>
           <p>¿Cómo desea abonar?</p>
           <label for="transfer">Transferencia</label>
-          <input type="radio" name="type-pay" id="transfer">
+          <input type="radio" name="type-pay" id="transfer" required>
           <label for="cash">Efectivo</label>
           <input type="radio" name="type-pay" id="cash">
+          <label for="credit-card">Tarjeta de Crédito</label>
+          <input type="radio" name="type-pay" id="credit-card">
         </div>
         <div>
           <p>Si desea abonar con Tarjeta de Crédito: </p>
-          <input type="text" placeholder="Ingrese numero de tarjeta">
+          <input type="text" placeholder="Ingrese número de tarjeta">
           <p>Fecha de vencimiento y Código de seguridad:</p>
           <input type="date">
           <input type="text" placeholder="Código de seguridad">

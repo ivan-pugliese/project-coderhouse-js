@@ -594,6 +594,22 @@ button:hover {
   gap: 2rem;
 }
 
+.welcome-sesion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.welcome-sesion h2 {
+  color: var(--color-principal);
+}
+
+.welcome-sesion img {
+  width: 400px;
+}
+
 .products {
   display: flex;
   flex-direction: column;

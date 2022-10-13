@@ -49,9 +49,13 @@ formRegister.addEventListener("submit", (e) => {
     });
     modalRegister.className = "none";
   }
-})
+});
 
-// Inicio de sesión tomando los datos del registro
+// Inicio de sesión tomando los datos del registro y que los productos me aparezcan para armar mi carrito.
+let welcomeSesion = document.getElementById("welcome-sesion");
+
+let productsTitle = document.getElementById("product-title");
+
 let formSesion = document.getElementById("formSesion");
 formSesion.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -64,6 +68,9 @@ formSesion.addEventListener("submit", (e) => {
     });
     modalSesion.className = "none";
     btnSesion.innerHTML = `<span class="jam jam-user"></span>${localStorage.getItem("usuario")}`;
+    welcomeSesion.className = "none";
+    productsTitle.className = "products-title";
+    cardsProductos.className = "cards-container";
   } else {
     Swal.fire({
       title: "Los datos son invalidos!",
@@ -72,4 +79,5 @@ formSesion.addEventListener("submit", (e) => {
       confirmButtonColor: "#ff4e50",
     });
   }
-})
+});
+
