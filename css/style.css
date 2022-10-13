@@ -600,6 +600,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  margin: 1rem;
 }
 
 .welcome-sesion h2 {
@@ -608,6 +609,21 @@ button:hover {
 
 .welcome-sesion img {
   width: 400px;
+}
+
+.build-form {
+  margin: 1rem;
+}
+
+.type-pay {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.credit-card-pay {
+  padding: 0;
 }
 
 .products {
